@@ -1,2 +1,2 @@
 # gmode
-node scraper for google.com/movies
+**g**oogle.com/**m**ovies scraper using n**ode**.js
