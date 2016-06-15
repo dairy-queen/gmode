@@ -1,2 +1,2 @@
-# gmode
-**g**oogle.com/**m**ovies scraper using n**ode**.js
+# meerio
+google.com/**m**ovies scraper using node.js and ch**eerio**
