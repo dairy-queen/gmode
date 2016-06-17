@@ -7,12 +7,12 @@ class Theatre extends Base {
     super(theatreElement.find('.desc').first())
 
     // let description = $(theatreElement).find('.desc').first(),
-    //     theatre = this._extractNameInfoURLId(description);
+    //     theatre = this._extractNameInfoURLId(description)
 
     this.showtimes = theatreElement
-        .find('.showtimes .movie')
-        .toArray()
-        .map(movieElement => new Movie($(movieElement)))
+      .find('.showtimes .movie')
+      .toArray()
+      .map(movieElement => new Movie($(movieElement)))
   }
 }
 

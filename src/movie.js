@@ -8,10 +8,10 @@ class Movie extends Base {
     this._extractRuntime()
 
     let times = movieElement
-        .children('.times')
-        .children('span')
-        .toArray()
-        .map(el => $(el).text().normalize().match(/\d{1,2}:\d{2}/)[0])
+      .children('.times')
+      .children('span')
+      .toArray()
+      .map(el => $(el).text().normalize().match(/\d{1,2}:\d{2}/)[0])
 
     this.times = this._convertTimesTo24h(times)
   }

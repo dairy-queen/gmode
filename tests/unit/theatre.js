@@ -6,7 +6,7 @@ let testHtml = fs.readFileSync('./tests/fixtures/hinsdale_mt_showtimes.html').to
 let $ = cheerio.load(testHtml.replace(/(\n|\s{2,})/g, ' '))
 
 let theatres = $('.theater')
-    .toArray()
-    .map(theatreElement => new Theatre($(theatreElement)))
+  .toArray()
+  .map(theatreElement => new Theatre($(theatreElement)))
 
 console.log(theatres)
