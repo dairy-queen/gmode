@@ -1,12 +1,8 @@
 /* eslint-env mocha */
-import fs from 'fs'
-import cheerio from 'cheerio'
-import Base from '../src/base.js'
+import $ from 'cheerio'
 import { expect } from 'chai'
-
-const TEST_HTML = fs.readFileSync('./test/fixtures/hinsdale_mt_showtimes.html', 'utf8').replace(/(\n|\s{2,})/g, ' ')
-let $ = cheerio.load(TEST_HTML)
-const THEATRES = $('.theater').toArray()
+import THEATRES from './fixtures/theatres.js'
+import Base from '../src/base.js'
 
 describe('Base', function () {
   describe('constructor', function () {

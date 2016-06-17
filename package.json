@@ -4,20 +4,16 @@
   "description": "node.js scraper for google.com/movies",
   "main": "index.js",
   "scripts": {
-    "test": "mocha --compilers js:babel-register tests/unit",
+    "test": "mocha --compilers js:babel-register",
     "precommit": "npm run standard",
     "standard": "standard",
     "standard-format": "standard-format -w"
   },
   "babel": {
-    "presets": [
-      "es2015-node6"
-    ]
+    "presets": ["es2015-node6"]
   },
   "eslintConfig": {
-    "extends": [
-      "standard"
-    ],
+    "extends": ["standard"],
     "parser": "babel-eslint"
   },
   "license": "ISC",
