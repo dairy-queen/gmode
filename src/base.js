@@ -21,7 +21,7 @@ class Base {
   }
 
   _stripAndTrim (string) {
-    return string.replace(/[^\x00-\x7F]/g, '').replace(/\s{2,}/g, ' ').trim()
+    return string.replace(/[^\\x00-\\x7F]/g, '').replace(/\s{2,}/g, ' ').trim()
   }
 }
 
