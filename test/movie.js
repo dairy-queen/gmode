@@ -2,7 +2,7 @@
 import $ from 'cheerio'
 import { expect } from 'chai'
 import THEATRES from './fixtures/theatres.js'
-import Movie from '../src/base.js'
+import Movie from '../src/movie.js'
 
 describe('Movie', function () {
   describe('constructor', function () {
@@ -13,7 +13,7 @@ describe('Movie', function () {
     it('should throw an error when not given a cheerio element', function () {
       expect(() => new Movie(THEATRES[0])).to.throw(Error)
     })
-    it('should set name, info, url, id, times and runtime', function () {
+    it('should have properties: name, info, url, id, times and runtime', function () {
       let movieElements = $(THEATRES[0]).find('.showtimes .movie').toArray()
       expect(new Movie($(movieElements[0]))).to.include.keys(['name', 'info', 'url', 'id', 'times', 'runtime'])
     })
